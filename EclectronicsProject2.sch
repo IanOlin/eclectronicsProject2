@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:EclectronicsProject2-rescue
 LIBS:power
 LIBS:device
 LIBS:switches
@@ -32,6 +33,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:newlib
+LIBS:EclectronicsProject2-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -48,13 +50,13 @@ Comment4 ""
 $EndDescr
 $Comp
 L FE310-G000 X?
-U 1 1 59C97ACF
-P 4700 3675
-F 0 "X?" H 4700 3675 60  0000 C CNN
-F 1 "FE310-G000" H 4700 3675 60  0000 C CNN
-F 2 "" H 4700 3675 60  0001 C CNN
-F 3 "" H 4700 3675 60  0001 C CNN
-	1    4700 3675
+U 1 1 59C9C5C5
+P 5025 3325
+F 0 "X?" H 5000 3400 60  0000 C CNN
+F 1 "FE310-G000" H 5025 3275 60  0000 C CNN
+F 2 "" V 4750 3250 60  0001 C CNN
+F 3 "" V 4750 3250 60  0001 C CNN
+	1    5025 3325
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
