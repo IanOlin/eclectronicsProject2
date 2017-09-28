@@ -38,7 +38,7 @@ EELAYER 25 0
 EELAYER END
 $Descr USLedger 17000 11000
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date ""
 Rev ""
@@ -779,4 +779,10 @@ F 3 "" H 13975 8725 50  0001 C CNN
 	1    13975 8725
 	1    0    0    -1  
 $EndComp
+$Sheet
+S 12100 3425 2075 2100
+U 59CD8778
+F0 "USBtoUART" 60
+F1 "USBtoUART.sch" 60
+$EndSheet
 $EndSCHEMATC
