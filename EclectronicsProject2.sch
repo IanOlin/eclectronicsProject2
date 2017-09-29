@@ -1574,4 +1574,12 @@ Wire Wire Line
 	16075 5000 15425 5000
 Wire Wire Line
 	15125 5000 14975 5000
+Text GLabel 2275 3425 0    60   Input ~ 0
+GPIO_16
+Text GLabel 2275 3250 0    60   Input ~ 0
+GPIO_17
+Wire Wire Line
+	2275 3250 2425 3250
+Wire Wire Line
+	2275 3425 2425 3425
 $EndSCHEMATC
