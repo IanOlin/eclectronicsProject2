@@ -33,6 +33,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:newlib
+LIBS:usb_microb_2040002-1
 LIBS:EclectronicsProject2-cache
 EELAYER 25 0
 EELAYER END
@@ -108,7 +109,7 @@ L clock Y?
 U 1 1 59CD8E57
 P 3825 4300
 F 0 "Y?" H 3825 4475 60  0000 C CNN
-F 1 "clock" H 3825 4325 60  0000 C CNN
+F 1 "12Mhz" H 3825 4325 60  0000 C CNN
 F 2 "" H 3825 4300 60  0001 C CNN
 F 3 "" H 3825 4300 60  0001 C CNN
 	1    3825 4300
@@ -136,6 +137,99 @@ F 3 "" H 3450 4475 50  0001 C CNN
 	1    3450 4475
 	1    0    0    -1  
 $EndComp
+NoConn ~ 4700 4000
+NoConn ~ 4700 3925
+NoConn ~ 4700 3850
+$Comp
+L Ferrite_Bead L?
+U 1 1 59CD98FB
+P 3825 850
+F 0 "L?" V 3675 875 50  0000 C CNN
+F 1 "Ferrite_Bead" V 3975 850 50  0000 C CNN
+F 2 "" V 3755 850 50  0001 C CNN
+F 3 "" H 3825 850 50  0001 C CNN
+	1    3825 850 
+	0    1    1    0   
+$EndComp
+$Comp
+L Ferrite_Bead L?
+U 1 1 59CD9A0D
+P 3825 1475
+F 0 "L?" V 3675 1500 50  0000 C CNN
+F 1 "Ferrite_Bead" V 3975 1475 50  0000 C CNN
+F 2 "" V 3755 1475 50  0001 C CNN
+F 3 "" H 3825 1475 50  0001 C CNN
+	1    3825 1475
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 59CD9A61
+P 4550 1875
+F 0 "#PWR?" H 4550 1625 50  0001 C CNN
+F 1 "GND" H 4550 1725 50  0000 C CNN
+F 2 "" H 4550 1875 50  0001 C CNN
+F 3 "" H 4550 1875 50  0001 C CNN
+	1    4550 1875
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 59CD9A84
+P 4550 1250
+F 0 "#PWR?" H 4550 1000 50  0001 C CNN
+F 1 "GND" H 4550 1100 50  0000 C CNN
+F 2 "" H 4550 1250 50  0001 C CNN
+F 3 "" H 4550 1250 50  0001 C CNN
+	1    4550 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 59CD9B33
+P 4350 1000
+F 0 "C?" H 4375 1100 50  0000 L CNN
+F 1 "4.7nF" H 4375 900 50  0000 L CNN
+F 2 "" H 4388 850 50  0001 C CNN
+F 3 "" H 4350 1000 50  0001 C CNN
+	1    4350 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 59CD9B63
+P 4725 1000
+F 0 "C?" H 4750 1100 50  0000 L CNN
+F 1 ".1uF" H 4750 900 50  0000 L CNN
+F 2 "" H 4763 850 50  0001 C CNN
+F 3 "" H 4725 1000 50  0001 C CNN
+	1    4725 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 59CD9BB3
+P 4350 1625
+F 0 "C?" H 4375 1725 50  0000 L CNN
+F 1 "4.7nF" H 4375 1525 50  0000 L CNN
+F 2 "" H 4388 1475 50  0001 C CNN
+F 3 "" H 4350 1625 50  0001 C CNN
+	1    4350 1625
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 59CD9BFE
+P 4725 1625
+F 0 "C?" H 4750 1725 50  0000 L CNN
+F 1 ".1uF" H 4750 1525 50  0000 L CNN
+F 2 "" H 4763 1475 50  0001 C CNN
+F 3 "" H 4725 1625 50  0001 C CNN
+	1    4725 1625
+	1    0    0    -1  
+$EndComp
+Text GLabel 3150 850  0    60   Input ~ 0
+VDD_3V3
 Wire Wire Line
 	4700 4500 4700 5125
 Wire Wire Line
@@ -177,7 +271,206 @@ Wire Wire Line
 Wire Wire Line
 	3675 4150 3150 4150
 Connection ~ 3150 4275
-NoConn ~ 4700 4000
-NoConn ~ 4700 3925
-NoConn ~ 4700 3850
+Wire Wire Line
+	3975 850  5150 850 
+Connection ~ 4350 850 
+Wire Wire Line
+	5150 850  5150 1850
+Connection ~ 4725 850 
+Wire Wire Line
+	4350 1150 4350 1250
+Wire Wire Line
+	4350 1250 4725 1250
+Wire Wire Line
+	4725 1250 4725 1150
+Connection ~ 4550 1250
+Wire Wire Line
+	3150 850  3675 850 
+Wire Wire Line
+	3375 1475 3675 1475
+Connection ~ 3375 850 
+Wire Wire Line
+	3975 1475 5075 1475
+Connection ~ 4350 1475
+Wire Wire Line
+	4350 1775 4725 1775
+Wire Wire Line
+	4550 1875 4550 1775
+Connection ~ 4550 1775
+Wire Wire Line
+	5075 1475 5075 1850
+Connection ~ 4725 1475
+Wire Wire Line
+	5225 1850 5375 1850
+Connection ~ 5300 1850
+Text GLabel 5325 1625 1    60   Input ~ 0
+VCOR_FFT
+Wire Wire Line
+	5325 1625 5325 1675
+Wire Wire Line
+	5325 1675 5375 1675
+Wire Wire Line
+	5375 1675 5375 1850
+Text GLabel 4700 675  0    60   Input ~ 0
+VPLL_FT
+Text GLabel 4700 1350 2    60   Input ~ 0
+VPHY_FT
+Wire Wire Line
+	4700 1350 4675 1350
+Wire Wire Line
+	4675 1350 4675 1425
+Wire Wire Line
+	4675 1425 4725 1425
+Wire Wire Line
+	4725 1425 4725 1475
+Wire Wire Line
+	4700 675  4725 675 
+Wire Wire Line
+	4725 675  4725 850 
+$Comp
+L C C?
+U 1 1 59CDA501
+P 3375 2725
+F 0 "C?" H 3400 2825 50  0000 L CNN
+F 1 ".1uF" H 3400 2625 50  0000 L CNN
+F 2 "" H 3413 2575 50  0001 C CNN
+F 3 "" H 3375 2725 50  0001 C CNN
+	1    3375 2725
+	1    0    0    -1  
+$EndComp
+Connection ~ 3375 1475
+$Comp
+L GND #PWR?
+U 1 1 59CDA7F6
+P 3375 2875
+F 0 "#PWR?" H 3375 2625 50  0001 C CNN
+F 1 "GND" H 3375 2725 50  0000 C CNN
+F 2 "" H 3375 2875 50  0001 C CNN
+F 3 "" H 3375 2875 50  0001 C CNN
+	1    3375 2875
+	1    0    0    -1  
+$EndComp
+Text GLabel 4025 2550 0    60   Input ~ 0
+VCOR_FFT
+$Comp
+L C C?
+U 1 1 59CDA845
+P 4175 2700
+F 0 "C?" H 4200 2800 50  0000 L CNN
+F 1 "4.7nF" H 4200 2600 50  0000 L CNN
+F 2 "" H 4213 2550 50  0001 C CNN
+F 3 "" H 4175 2700 50  0001 C CNN
+	1    4175 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 59CDA8BB
+P 4475 2700
+F 0 "C?" H 4500 2800 50  0000 L CNN
+F 1 ".1uF" H 4500 2600 50  0000 L CNN
+F 2 "" H 4513 2550 50  0001 C CNN
+F 3 "" H 4475 2700 50  0001 C CNN
+	1    4475 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 2425 3375 2425
+Connection ~ 3375 2425
+$Comp
+L GND #PWR?
+U 1 1 59CDAC6E
+P 4325 2850
+F 0 "#PWR?" H 4325 2600 50  0001 C CNN
+F 1 "GND" H 4325 2700 50  0000 C CNN
+F 2 "" H 4325 2850 50  0001 C CNN
+F 3 "" H 4325 2850 50  0001 C CNN
+	1    4325 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4025 2550 4700 2550
+Connection ~ 4175 2550
+Connection ~ 4475 2550
+Wire Wire Line
+	4175 2850 4475 2850
+Connection ~ 4325 2850
+Wire Wire Line
+	3375 850  3375 2575
+$Comp
+L USB_microB_2040002-1 J?
+U 1 1 59CDB17F
+P 1450 3450
+F 0 "J?" H 1000 4100 60  0000 L CNN
+F 1 "USB_microB_2040002-1" H 1000 4000 60  0000 L CNN
+F 2 "" H 1800 3600 50  0001 C CNN
+F 3 "" H 1800 3600 50  0001 C CNN
+	1    1450 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 59CDB20A
+P 825 4175
+F 0 "#PWR?" H 825 3925 50  0001 C CNN
+F 1 "GND" H 825 4025 50  0000 C CNN
+F 2 "" H 825 4175 50  0001 C CNN
+F 3 "" H 825 4175 50  0001 C CNN
+	1    825  4175
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 4150 2100 3850
+Wire Wire Line
+	825  4150 2100 4150
+Connection ~ 1600 4150
+Connection ~ 1500 4150
+Connection ~ 1400 4150
+Connection ~ 1300 4150
+Connection ~ 1200 4150
+Wire Wire Line
+	825  4150 825  4175
+Connection ~ 1100 4150
+Text GLabel 2250 2300 0    60   Input ~ 0
+VBUS
+$Comp
+L C C?
+U 1 1 59CDB66D
+P 2600 2450
+F 0 "C?" H 2625 2550 50  0000 L CNN
+F 1 "4.7uF" H 2625 2350 50  0000 L CNN
+F 2 "" H 2638 2300 50  0001 C CNN
+F 3 "" H 2600 2450 50  0001 C CNN
+	1    2600 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 2300 2250 3050
+Wire Wire Line
+	2250 3050 2100 3050
+$Comp
+L GND #PWR?
+U 1 1 59CDB7AD
+P 2600 2600
+F 0 "#PWR?" H 2600 2350 50  0001 C CNN
+F 1 "GND" H 2600 2450 50  0000 C CNN
+F 2 "" H 2600 2600 50  0001 C CNN
+F 3 "" H 2600 2600 50  0001 C CNN
+	1    2600 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 2300 2600 2300
+Wire Wire Line
+	2100 3250 3875 3250
+Wire Wire Line
+	3875 3250 3875 3050
+Wire Wire Line
+	3875 3050 4700 3050
+Wire Wire Line
+	2100 3450 3975 3450
+Wire Wire Line
+	3975 3450 3975 3150
+Wire Wire Line
+	3975 3150 4700 3150
 $EndSCHEMATC
