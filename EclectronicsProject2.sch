@@ -1194,6 +1194,77 @@ F 3 "" H 15275 5000 50  0001 C CNN
 	1    15275 5000
 	-1   0    0    1   
 $EndComp
+Text GLabel 2275 3425 0    60   Input ~ 0
+GPIO_16
+Text GLabel 2275 3250 0    60   Input ~ 0
+GPIO_17
+$Comp
+L Conn_01x08 J?
+U 1 1 59CE5643
+P 4625 6975
+F 0 "J?" H 4625 7375 50  0000 C CNN
+F 1 "Conn_01x08" H 4625 6475 50  0000 C CNN
+F 2 "" H 4625 6975 50  0001 C CNN
+F 3 "" H 4625 6975 50  0001 C CNN
+	1    4625 6975
+	1    0    0    -1  
+$EndComp
+Text Label 4925 4475 3    60   ~ 0
+GPIO_0
+Text Label 4775 4475 3    60   ~ 0
+GPIO_1
+Text Label 4625 4475 3    60   ~ 0
+GPIO_2
+Text Label 4475 4475 3    60   ~ 0
+GPIO_3
+Text Label 4325 4475 3    60   ~ 0
+GPIO_4
+Text Label 4025 4475 3    60   ~ 0
+GPIO_5
+Text Label 3275 4475 3    60   ~ 0
+GPIO_12
+Text Label 2425 3575 2    60   ~ 0
+GPIO_13
+Text Label 6425 7250 2    60   ~ 0
+GPIO_0
+Text Label 6425 7175 2    60   ~ 0
+GPIO_1
+Text Label 6425 7100 2    60   ~ 0
+GPIO_2
+Text Label 6425 7025 2    60   ~ 0
+GPIO_3
+Text Label 6425 6950 2    60   ~ 0
+GPIO_4
+Text Label 6425 6875 2    60   ~ 0
+GPIO_5
+Text Label 6425 6800 2    60   ~ 0
+GPIO_12
+Text Label 6425 6650 2    60   ~ 0
+GPIO_13
+$Comp
+L Conn_01x10 J?
+U 1 1 59CE8FCD
+P 7925 6975
+F 0 "J?" H 7925 7475 50  0000 C CNN
+F 1 "Conn_01x10" H 7925 6375 50  0000 C CNN
+F 2 "" H 7925 6975 50  0001 C CNN
+F 3 "" H 7925 6975 50  0001 C CNN
+	1    7925 6975
+	1    0    0    -1  
+$EndComp
+$Comp
+L TXS0108E U?
+U 1 1 59CE9669
+P 6975 6775
+F 0 "U?" V 6975 6625 60  0000 C CNN
+F 1 "TXS0108E" V 6875 6600 60  0000 C CNN
+F 2 "" H 6975 6775 60  0001 C CNN
+F 3 "" H 6975 6775 60  0001 C CNN
+	1    6975 6775
+	1    0    0    -1  
+$EndComp
+Text GLabel 5500 6675 0    31   Input ~ 0
+VDD_3V3
 Connection ~ 15975 6225
 Connection ~ 15975 6525
 Connection ~ 15775 6225
@@ -1574,25 +1645,10 @@ Wire Wire Line
 	16075 5000 15425 5000
 Wire Wire Line
 	15125 5000 14975 5000
-Text GLabel 2275 3425 0    60   Input ~ 0
-GPIO_16
-Text GLabel 2275 3250 0    60   Input ~ 0
-GPIO_17
 Wire Wire Line
 	2275 3250 2425 3250
 Wire Wire Line
 	2275 3425 2425 3425
-$Comp
-L Conn_01x08 J?
-U 1 1 59CE5643
-P 4625 6975
-F 0 "J?" H 4625 7375 50  0000 C CNN
-F 1 "Conn_01x08" H 4625 6475 50  0000 C CNN
-F 2 "" H 4625 6975 50  0001 C CNN
-F 3 "" H 4625 6975 50  0001 C CNN
-	1    4625 6975
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2650 6375 2650 6275
 Wire Wire Line
@@ -1653,4 +1709,110 @@ Wire Wire Line
 	4325 7700 2625 7700
 Wire Wire Line
 	2625 7700 2625 7500
+$Comp
+L GND #PWR?
+U 1 1 59CEAFB6
+P 5800 7000
+F 0 "#PWR?" H 5800 6750 50  0001 C CNN
+F 1 "GND" H 5800 6850 50  0000 C CNN
+F 2 "" H 5800 7000 50  0001 C CNN
+F 3 "" H 5800 7000 50  0001 C CNN
+	1    5800 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 59CEB40B
+P 5800 6850
+F 0 "C?" H 5825 6950 50  0000 L CNN
+F 1 ".1uF" H 5825 6750 50  0000 L CNN
+F 2 "" H 5838 6700 50  0001 C CNN
+F 3 "" H 5800 6850 50  0001 C CNN
+	1    5800 6850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 6675 6425 6675
+Wire Wire Line
+	5800 6675 5800 6700
+Wire Wire Line
+	6425 6675 6425 6725
+Connection ~ 5800 6675
+Text GLabel 7525 6175 2    60   Input ~ 0
+VDD_IOREFF
+Wire Wire Line
+	7525 6175 7475 6175
+Wire Wire Line
+	7475 6175 7475 6725
+Wire Wire Line
+	7475 6725 7425 6725
+Wire Wire Line
+	7425 6650 7425 6575
+Wire Wire Line
+	7425 6575 7725 6575
+Wire Wire Line
+	7425 6800 7525 6800
+Wire Wire Line
+	7525 6800 7525 6675
+Wire Wire Line
+	7525 6675 7725 6675
+Wire Wire Line
+	7425 6875 7575 6875
+Wire Wire Line
+	7575 6875 7575 6775
+Wire Wire Line
+	7575 6775 7725 6775
+Wire Wire Line
+	7425 6950 7625 6950
+Wire Wire Line
+	7625 6950 7625 6875
+Wire Wire Line
+	7625 6875 7725 6875
+Wire Wire Line
+	7600 6975 7725 6975
+Wire Wire Line
+	7600 6975 7600 7025
+Wire Wire Line
+	7600 7025 7425 7025
+Wire Wire Line
+	7425 7100 7625 7100
+Wire Wire Line
+	7625 7100 7625 7075
+Wire Wire Line
+	7625 7075 7725 7075
+Wire Wire Line
+	7725 7175 7425 7175
+Wire Wire Line
+	7425 7250 7725 7250
+Wire Wire Line
+	7725 7250 7725 7275
+$Comp
+L GND #PWR?
+U 1 1 59CECFD6
+P 7425 7400
+F 0 "#PWR?" H 7425 7150 50  0001 C CNN
+F 1 "GND" H 7425 7250 50  0000 C CNN
+F 2 "" H 7425 7400 50  0001 C CNN
+F 3 "" H 7425 7400 50  0001 C CNN
+	1    7425 7400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7425 7325 7425 7400
+$Comp
+L GND #PWR?
+U 1 1 59CED251
+P 7575 7575
+F 0 "#PWR?" H 7575 7325 50  0001 C CNN
+F 1 "GND" H 7575 7425 50  0000 C CNN
+F 2 "" H 7575 7575 50  0001 C CNN
+F 3 "" H 7575 7575 50  0001 C CNN
+	1    7575 7575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7725 7475 7575 7475
+Wire Wire Line
+	7575 7475 7575 7575
+NoConn ~ 7725 7375
 $EndSCHEMATC
