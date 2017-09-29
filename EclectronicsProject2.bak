@@ -2227,4 +2227,114 @@ Wire Wire Line
 Wire Wire Line
 	10175 7600 9175 7600
 Connection ~ 9175 7600
+Text GLabel 9750 8250 0    39   Input ~ 0
+VDD_5V0
+Text GLabel 9750 8050 0    39   Input ~ 0
+VDD_3V3
+Text GLabel 9950 8125 2    60   Input ~ 0
+VDD_IOREFF
+NoConn ~ 9750 8050
+NoConn ~ 9950 8125
+NoConn ~ 9750 8250
+Text Notes 9225 8175 0    60   ~ 0
+Jumper Thing?\n
+$Comp
+L IS25LP0128 U?
+U 1 1 59D012A5
+P 9375 8725
+F 0 "U?" H 9375 9000 60  0000 C CNN
+F 1 "IS25LP0128" H 9375 8450 60  0000 C CNN
+F 2 "" H 9375 8725 60  0001 C CNN
+F 3 "" H 9375 8725 60  0001 C CNN
+	1    9375 8725
+	1    0    0    -1  
+$EndComp
+Text GLabel 9875 8425 2    60   Input ~ 0
+VDD_3V3_MOFF
+Wire Wire Line
+	9875 8425 9875 8575
+Wire Wire Line
+	9875 8575 9850 8575
+$Comp
+L GND #PWR?
+U 1 1 59D01D65
+P 9175 9600
+F 0 "#PWR?" H 9175 9350 50  0001 C CNN
+F 1 "GND" H 9175 9450 50  0000 C CNN
+F 2 "" H 9175 9600 50  0001 C CNN
+F 3 "" H 9175 9600 50  0001 C CNN
+	1    9175 9600
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 59D01EB0
+P 9450 9450
+F 0 "C?" H 9475 9550 50  0000 L CNN
+F 1 ".1uF" H 9475 9350 50  0000 L CNN
+F 2 "" H 9488 9300 50  0001 C CNN
+F 3 "" H 9450 9450 50  0001 C CNN
+	1    9450 9450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9875 8525 10800 8525
+Wire Wire Line
+	10800 8525 10800 9950
+Wire Wire Line
+	10800 9300 9450 9300
+Connection ~ 9875 8525
+Wire Wire Line
+	8925 8875 8925 9600
+Wire Wire Line
+	8925 9600 9450 9600
+Connection ~ 9175 9600
+$Comp
+L R R?
+U 1 1 59D02BD3
+P 9300 9950
+F 0 "R?" V 9380 9950 50  0000 C CNN
+F 1 "100K" V 9300 9950 50  0000 C CNN
+F 2 "" V 9230 9950 50  0001 C CNN
+F 3 "" H 9300 9950 50  0001 C CNN
+	1    9300 9950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8925 8575 8500 8575
+Wire Wire Line
+	8500 8575 8500 9950
+Wire Wire Line
+	8500 9950 9150 9950
+Wire Wire Line
+	10800 9950 9450 9950
+Connection ~ 10800 9300
+Text Label 9850 8775 0    60   ~ 0
+QSPI_SCK
+Text Label 2425 1900 2    60   ~ 0
+QSPI_SCK
+Text Label 3575 1500 1    39   ~ 0
+QSPI_1
+Text Label 3450 1500 1    39   ~ 0
+QSPI_2
+Text Label 3325 1500 1    39   ~ 0
+QSPI_3
+Text Label 3700 1500 1    39   ~ 0
+QSPI_0
+Text Label 9850 8875 0    39   ~ 0
+QSPI_0
+Text Label 8925 8675 2    39   ~ 0
+QSPI_1
+Text Label 8925 8775 2    39   ~ 0
+QSPI_2
+Text Label 9850 8675 0    39   ~ 0
+QSPI_3
+Text Label 8700 8575 2    39   ~ 0
+QSPI_CS
+Text Label 3825 1500 1    39   ~ 0
+QSPI_CS
+Text GLabel 5550 2900 2    39   Input ~ 0
+AON_PSD_LFALTCLK
+Text GLabel 1300 8075 0    39   Input ~ 0
+AON_PSD_LFALTCLK
 $EndSCHEMATC
