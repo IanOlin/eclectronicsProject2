@@ -33,6 +33,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:newlib
+LIBS:usb_microb_2040002-1
 LIBS:EclectronicsProject2-cache
 EELAYER 25 0
 EELAYER END
