@@ -8,8 +8,20 @@ $CMP PGB1010603
 F https://www.digikey.com/product-detail/en/littelfuse-inc/PGB1010603NRHF/F4239CT-ND/3305589
 $ENDCMP
 #
+$CMP TP0610L
+D -60V Vds, -0.18A Id, P-Channel MOSFET, TO-92
+K P-Channel MOSFET
+F http://www.vishay.com/docs/70209/70209.pdf
+$ENDCMP
+#
 $CMP UG-2864HSWEG01
 F https://cdn-shop.adafruit.com/datasheets/UG-2864HSWEG01.pdf , https://cdn-shop.adafruit.com/datasheets/UG-2864HSWEG01+user+guide.pdf, https://learn.adafruit.com/monochrome-oled-breakouts/downloads , https://www.digikey.com/product-detail/en/adafruit-industries-llc/326/1528-1220-ND/5353680
+$ENDCMP
+#
+$CMP VP0610L
+D -60V Vds, -0.18A Id, P-Channel MOSFET, TO-92
+K P-Channel MOSFET
+F http://www.vishay.com/docs/70209/70209.pdf
 $ENDCMP
 #
 #End Doc Library
